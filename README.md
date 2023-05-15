@@ -2,7 +2,7 @@
 A 3x3 Tic-Tac-Toe game written in C++ with AI that plays the best move found with the [minimax alogrithm](https://en.wikipedia.org/wiki/Minimax).
 
 ## Demo
-![](./resources/demo.gif)
+![](./resources/demo1.gif)
 ## Minimax Algorithm
 
 Diagram of how it works:
