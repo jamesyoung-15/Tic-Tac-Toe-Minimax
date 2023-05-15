@@ -4,10 +4,14 @@ A 3x3 Tic-Tac-Toe game written in C++ with AI that plays the best move found wit
 ## Demo
 Example of playing against computer as X.
 
+<!-- <img src="./resources/demo.gif" width="800" height="450"/> -->
+
 ![](./resources/demo.gif)
+
 ## Minimax Algorithm
 
 Diagram of how it works:
+
 ![](./resources/minimax-algo.png)
 
 Pseudocode:
