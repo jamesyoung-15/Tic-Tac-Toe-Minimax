@@ -11,9 +11,12 @@ Example of playing against computer as X.
 ## Quick Usage
 Only tested with Linux, but should work on other systems as long as system has C++ compiler.
 
-1. Clone this repository (or just copy the relevant file contents) and go into directory.
+1. Clone this repository (or just copy the relevant file contents).
 ``` bash
 git clone https://github.com/jamesyoung-15/Tic-Tac-Toe-Minimax
+```
+2. Go into directory.
+``` bash
 cd Tic-Tac-Toe-Minimax
  ```
  3. (Optional) Compile the program with make.
