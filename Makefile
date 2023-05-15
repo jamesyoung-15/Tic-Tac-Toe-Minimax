@@ -1,11 +1,11 @@
-SRCS = main.cpp game.cpp
+SRCS = main.cpp game.cpp ai.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(OBJS:.o=.d)
 
-all: tic-tac-toe-game
+all: tic-tac-toe-game.o
 
-tic-tac-toe-game: $(OBJS)
-	g++ -o $@ $(CPPFLAGS) $^
+tic-tac-toe-game.o: $(OBJS)
+	g++ -o $@ $^
 
 %.o: %.cpp
 	g++ -MMD -MP -c $< -o $@

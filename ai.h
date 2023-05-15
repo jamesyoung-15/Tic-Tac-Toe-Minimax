@@ -59,7 +59,7 @@ class BoardTree
 
 
 };
-
+// Single board node that has the current board state and also a subtree for possible moves
 struct BoardNode {
     const Board board; // Current board state
     BoardTree subTree[BOARD_SIZE][BOARD_SIZE]; // One sub-tree for each possible next move

@@ -5,8 +5,8 @@
 #include "math.h"
 
 const int BOARD_SIZE = 3;
-// const int XWIN_SCORE = 1000;
-// const int OWIN_SCORE = -1000;
+const int WIN_SCORE = 1;
+const int ILLEGAL = -500;
 
 // Single cell of a 3x3 board
 enum Cell
@@ -25,12 +25,14 @@ struct BoardCoordinates
 };
 
 // optimal move struct
-struct BoardOptimalMove {
+struct BoardOptimalMove 
+{
     BoardCoordinates coords;
+    int score;
 
     // Default constructor returns an "illegal" move
-    BoardOptimalMove(): coords(BoardCoordinates(-1, -1)) {}
-    BoardOptimalMove(const BoardCoordinates& coords):  coords(coords) {}
+    BoardOptimalMove(): score(ILLEGAL), coords(BoardCoordinates(-1, -1)) {}
+    BoardOptimalMove(const int score, const BoardCoordinates& coords): score(score), coords(coords) {}
 };
 
 // main game board class
@@ -55,14 +57,14 @@ class Board
         * @return true 
         * @return false 
         */
-        bool boardFull();
+        bool boardFull() const;
 
         /**
         * @brief Check if either players have won (horizontal, vertical, and diagonal check)
         * @return true if over
         * @return false if not
         */
-        bool checkWin();
+        bool checkWin() const;
 
         /**
          * @brief Plays a move based on passed coordinate, checks if it is a valid move.
@@ -77,7 +79,7 @@ class Board
          * @brief Prints the board state
          * 
          */
-        void printBoard();
+        void printBoard() const;
 
         /**
          * @brief Returns the current player of the game.
@@ -85,6 +87,14 @@ class Board
          * @return O current player is O
          */
          Cell getCurrentPlayer() const;
+
+         /**
+          * @brief Returns the board score, for this game 0 is game ongoing and 1 is game won for X, -1 game won for O.
+          * @return -1 O wins
+          * @return 0 No winner
+          * @return 1 X wins
+          */
+          int getBoardScore() const;
 };
 
 

@@ -15,7 +15,7 @@ Board::Board()
     }
 }
 
-bool Board::boardFull()
+bool Board::boardFull() const
 {
     for (int i=0;i<BOARD_SIZE;i++)
     {
@@ -28,7 +28,7 @@ bool Board::boardFull()
     return true;
 }
 
-bool Board::checkWin()
+bool Board::checkWin() const
 {
 
     /* Check for winners */
@@ -150,7 +150,7 @@ bool Board::makeMove(const BoardCoordinates& coordinate)
     return true;
 }
 
-void Board::printBoard()
+void Board::printBoard() const
 {
     for (int i=0;i<BOARD_SIZE;i++)
     {
@@ -188,4 +188,15 @@ void Board::printBoard()
 Cell Board::getCurrentPlayer() const
 {
     return curPlayer;
+}
+
+int Board::getBoardScore() const
+{
+    if(checkWin() && curPlayer==X)
+        return -WIN_SCORE;
+    
+    else if(checkWin() && curPlayer==O)
+        return WIN_SCORE;
+    
+    return 0;
 }
