@@ -8,6 +8,23 @@ Example of playing against computer as X.
 
 ![](./resources/demo.gif)
 
+## Quick Usage
+Only tested with Linux, but should work on other systems as long as system has C++ compiler.
+
+1. Clone this repository (or just copy the relevant file contents).
+``` 
+git clone https://github.com/jamesyoung-15/Tic-Tac-Toe-Minimax
+ ```
+ 2. (Optional) Compile the program with make.
+ ```
+make
+ ```
+ 3. Run the script
+ ```
+ ./tic-tac-toe-game.o
+ ``` 
+
+
 ## Minimax Algorithm
 
 Diagram of how it works:
@@ -87,19 +104,3 @@ BoardOptimalMove BoardTree::getOptimalMove(const unsigned int depth)
 }
 
 ```
-
-## Quick Usage
-Only tested with Linux, but should work as long as system has C++ compiler.
-
-1. Clone this repository (or just copy the file content)
-``` 
-git clone https://github.com/jamesyoung-15/Tic-Tac-Toe-Minimax
- ```
- 2. Compile the program with make.
- ```
-make
- ```
- 3. Run the script
- ```
- ./tic-tac-toe-game.o
- ``` 
